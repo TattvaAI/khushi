@@ -16,17 +16,17 @@ export default function ContactPage() {
             <div className="flex flex-col gap-2">
               <span className="font-sans text-xs uppercase tracking-widest text-text-muted">Email</span>
               <a 
-                href="mailto:khushi.bansal@example.com" 
+                href="mailto:thekhushibansal.work@gmail.com" 
                 className="font-serif text-2xl text-foreground hover:text-text-muted transition-colors duration-300"
               >
-                khushi.bansal@example.com
+                thekhushibansal.work@gmail.com
               </a>
             </div>
 
             <div className="flex flex-col gap-2">
               <span className="font-sans text-xs uppercase tracking-widest text-text-muted">Network</span>
               <a 
-                href="https://linkedin.com/in/khushi-bansal" 
+                href="https://linkedin.com/in/thekhushibansal" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-serif text-2xl text-foreground hover:text-text-muted transition-colors duration-300"

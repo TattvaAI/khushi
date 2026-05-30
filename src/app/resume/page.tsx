@@ -42,8 +42,8 @@ export default function ResumePage() {
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans text-sm text-foreground">
               <span>New Delhi, India</span>
               <span>+91 87000 12023</span>
-              <span>khushi.bansal@example.com</span>
-              <span className="underline underline-offset-4">linkedin.com/in/khushi-bansal</span>
+              <span>thekhushibansal.work@gmail.com</span>
+              <span className="underline underline-offset-4">linkedin.com/in/thekhushibansal</span>
             </div>
           </header>
 
@@ -133,7 +133,7 @@ export default function ResumePage() {
             Khushi Bansal
           </h1>
           <div style={{ fontSize: '10pt', fontFamily: 'sans-serif' }}>
-            New Delhi, India &nbsp;|&nbsp; +91 87000 12023 &nbsp;|&nbsp; khushi.bansal@example.com &nbsp;|&nbsp; linkedin.com/in/khushi-bansal
+            New Delhi, India &nbsp;|&nbsp; +91 87000 12023 &nbsp;|&nbsp; thekhushibansal.work@gmail.com &nbsp;|&nbsp; linkedin.com/in/thekhushibansal
           </div>
         </header>
 
@@ -218,6 +218,7 @@ export default function ResumePage() {
         @media print {
           @page { size: auto; margin: 15mm; }
           body { background: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+          header, footer { display: none !important; }
         }
       `}} />
     </>

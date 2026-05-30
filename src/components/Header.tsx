@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-full py-8 px-6 md:px-12 flex justify-between items-center z-50 relative animate-fade-in">
+    <header className="w-full py-8 px-6 md:px-12 flex justify-between items-center z-50 relative animate-fade-in print:hidden">
       <Link href="/" className="group">
         <span className="font-serif text-xl tracking-tight text-foreground group-hover:opacity-70 transition-opacity duration-300">
           Khushi Bansal

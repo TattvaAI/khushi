@@ -1,8 +1,7 @@
-"use client";
-
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import ReportControls from "@/components/ReportControls";
 
 // ==========================================
 // NATIVE REPORT COMPONENTS
@@ -281,23 +280,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
           <div className="w-full text-foreground print:text-black pb-12">
             <div className="flex justify-between items-center mb-8 border-b border-[var(--color-border)] pb-4 print:hidden">
               <h2 className="font-serif text-2xl text-foreground">Detailed Analysis</h2>
-              <div className="flex gap-6">
-                <button 
-                  onClick={() => typeof window !== 'undefined' && window.print()}
-                  className="inline-flex items-center gap-3 text-sm font-sans tracking-wide uppercase text-foreground hover:text-text-muted transition-colors duration-300"
-                >
-                  <span>Print Analysis</span>
-                </button>
-                <a 
-                  href={report.pdfPath} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 text-sm font-sans tracking-wide uppercase text-foreground hover:text-text-muted transition-colors duration-300"
-                >
-                  <span>Download Original PDF</span>
-                  <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" strokeWidth={1.5} />
-                </a>
-              </div>
+              <ReportControls pdfPath={report.pdfPath} />
             </div>
 
             {resolvedParams.slug === "nestle-india" && <NestleNativeReport />}
