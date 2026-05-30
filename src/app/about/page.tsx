@@ -14,13 +14,13 @@ export default function AboutPage() {
           <section>
             <h2 className="font-sans text-xs uppercase tracking-widest text-text-muted mb-6">Profile</h2>
             <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed font-light">
-              I am an Investment Analyst Intern at Walford Capitals, driven by a rigorous fundamental approach to equity research and financial modeling.
+              I am an equity research analyst at Walford Capitals, driven by a rigorous fundamental approach to equity research and financial modeling.
             </p>
           </section>
 
           <section className="flex flex-col gap-6 text-foreground font-light text-lg">
             <p>
-              My analytical framework focuses on identifying structural growth drivers, understanding complex competitive dynamics, and executing deep-dive financial valuations including DCF, Comparable Company Analysis, and Sum-of-the-Parts modeling.
+              My analytical framework focuses on identifying structural growth drivers, understanding complex competitive dynamics, and executing deep-dive financial valuations including DCF and Comparable Company Analysis.
             </p>
             <p>
               Beyond modeling, I emphasize clear, actionable communication, synthesizing complex data into high-conviction investment theses. My recent work includes comprehensive coverage on Nestle India, Waaree Energies, and thematic research on the Semaglutide patent cliff.

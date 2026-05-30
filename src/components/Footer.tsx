@@ -7,7 +7,7 @@ export default function Footer() {
         </p>
         <div className="flex gap-6">
           <a 
-            href="https://linkedin.com/in/thekhushibansal" 
+            href="https://www.linkedin.com/in/thekhushibansal/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-xs font-sans text-text-muted hover:text-foreground transition-colors duration-300"
@@ -15,7 +15,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <a 
-            href="mailto:thekhushibansal.work@gmail.com" 
+            href="mailto:Thekhushibansal.work@gmail.com" 
             className="text-xs font-sans text-text-muted hover:text-foreground transition-colors duration-300"
           >
             Email

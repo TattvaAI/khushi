@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Download } from "lucide-react";
 import ReportControls from "@/components/ReportControls";
+import { getReportBySlug } from "@/data/reports";
 
 // ==========================================
 // NATIVE REPORT COMPONENTS
@@ -82,7 +83,7 @@ function WaareeNativeReport() {
       <section className="print:break-inside-avoid">
         <h3 className="font-sans text-sm uppercase tracking-widest font-semibold border-b border-border-strong pb-2 mb-6">Investment Thesis</h3>
         <p className="mb-4">
-          We assign a <strong>BUY</strong> rating to Waaree Energies with a Target Price range of <strong>INR 2,656 &ndash; 3,288</strong>. Waaree is structurally positioned as India's premier solar PV module manufacturer, currently operating at a massive 13.3 GW installed capacity with an integrated 5.4 GW solar cell facility. 
+          We assign a <strong>HOLD</strong> rating to Waaree Energies with a Target Price range of <strong>INR 2,656.43 &ndash; 3,288.32</strong>. Waaree is structurally positioned as India's premier solar PV module manufacturer, currently operating at a massive 13.3 GW installed capacity with an integrated 5.4 GW solar cell facility. 
         </p>
         <p>
           The company acts as the apex beneficiary of India's aggressive renewable energy targets (500 GW non-fossil capacity by 2030). Waaree has demonstrated staggering fundamental momentum, compounding net profit at a 108% CAGR over the last 5 years, underscored by strong operating margins (~74%) and substantial export dominance (44% market share of India's export market).
@@ -194,42 +195,12 @@ function SemaglutideNativeReport() {
 
 
 // ==========================================
-// DATABASE & MAIN PAGE COMPONENT
+// MAIN PAGE COMPONENT
 // ==========================================
-
-const reportsDB = {
-  "nestle-india": {
-    title: "Nestle India",
-    subtitle: "Capitalizing on Rural Resurgence and Premiumization",
-    date: "September 2024",
-    target: "INR 2,836",
-    recommendation: "BUY",
-    pdfPath: "/pdfs/nestle-research-report.pdf",
-    isNative: true,
-  },
-  "waaree-energies": {
-    title: "Waaree Energies",
-    subtitle: "Riding the Solar Wave with Robust Capacity Expansion",
-    date: "October 2024",
-    target: "INR 4,374",
-    recommendation: "BUY",
-    pdfPath: "/pdfs/waaree-energies-research-report.pdf",
-    isNative: true,
-  },
-  "semaglutide-patent-cliff": {
-    title: "Semaglutide & The Patent Cliff",
-    subtitle: "Navigating the Future of GLP-1 and Weight Loss Drugs",
-    date: "2024",
-    target: "Industry",
-    recommendation: "ANALYSIS",
-    pdfPath: "/pdfs/semaglutide-patent-cliff-report.pdf",
-    isNative: true,
-  }
-};
 
 export default async function ReportPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const report = reportsDB[resolvedParams.slug as keyof typeof reportsDB];
+  const report = getReportBySlug(resolvedParams.slug);
 
   if (!report) {
     notFound();
@@ -253,7 +224,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
             <div className="max-w-3xl">
               <span className="font-sans text-xs uppercase tracking-widest text-text-muted print:text-black mb-6 block">
-                {report.date} &mdash; Equity Research
+                {report.date} &mdash; {resolvedParams.slug === "semaglutide-patent-cliff" ? "Industry Note" : "Equity Research"}
               </span>
               <h1 className="font-serif text-4xl md:text-6xl text-foreground print:text-black mb-6 leading-tight">
                 {report.title}
@@ -263,16 +234,18 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
               </p>
             </div>
 
-            <div className="flex gap-8 md:text-right pt-4 md:pt-0 border-t md:border-none border-[var(--color-border)] w-full md:w-auto">
-              <div className="flex flex-col">
-                <span className="font-sans text-xs uppercase tracking-widest text-text-muted print:text-black mb-1">Target</span>
-                <span className="font-sans text-lg text-foreground print:text-black">{report.target}</span>
+            {resolvedParams.slug !== "semaglutide-patent-cliff" && (
+              <div className="flex gap-8 md:text-right pt-4 md:pt-0 border-t md:border-none border-[var(--color-border)] w-full md:w-auto">
+                <div className="flex flex-col">
+                  <span className="font-sans text-xs uppercase tracking-widest text-text-muted print:text-black mb-1">Target</span>
+                  <span className="font-sans text-lg text-foreground print:text-black">{report.target}</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-sans text-xs uppercase tracking-widest text-text-muted print:text-black mb-1">Rec</span>
+                  <span className="font-sans text-lg text-foreground print:text-black font-medium">{report.recommendation}</span>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <span className="font-sans text-xs uppercase tracking-widest text-text-muted print:text-black mb-1">Rec</span>
-                <span className="font-sans text-lg text-foreground print:text-black font-medium">{report.recommendation}</span>
-              </div>
-            </div>
+            )}
           </div>
         </header>
 
@@ -287,6 +260,23 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
             {resolvedParams.slug === "waaree-energies" && <WaareeNativeReport />}
             {resolvedParams.slug === "semaglutide-patent-cliff" && <SemaglutideNativeReport />}
 
+          </div>
+        )}
+
+        {!report.isNative && (
+          <div className="w-full text-foreground print:text-black pb-12 border-t border-[var(--color-border)] pt-12 flex flex-col items-center justify-center text-center">
+            <p className="font-sans text-base text-text-muted mb-8 font-light max-w-md">
+              The full, comprehensive research report is available for viewing and download as an institutional-grade PDF document.
+            </p>
+            <a 
+              href={report.pdfPath} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-4 text-sm font-sans tracking-wide uppercase text-background bg-foreground px-8 py-4 hover:opacity-90 transition-all duration-300"
+            >
+              <span>Download Full PDF Report</span>
+              <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" strokeWidth={1.5} />
+            </a>
           </div>
         )}
 

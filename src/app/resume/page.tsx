@@ -41,8 +41,7 @@ export default function ResumePage() {
             </h1>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans text-sm text-foreground">
               <span>New Delhi, India</span>
-              <span>+91 87000 12023</span>
-              <span>thekhushibansal.work@gmail.com</span>
+              <span>Thekhushibansal.work@gmail.com</span>
               <span className="underline underline-offset-4">linkedin.com/in/thekhushibansal</span>
             </div>
           </header>
@@ -66,7 +65,7 @@ export default function ResumePage() {
               </div>
               <ul className="list-disc list-outside ml-5 space-y-2 font-serif text-base text-foreground font-light">
                 <li>Published high-conviction initiation coverage on mid-to-large cap Indian equities (Nestle India, Waaree Energies) and thematic industry reports (Semaglutide Patent Cliff).</li>
-                <li>Constructed comprehensive 3-statement operating models, DCFs, and Sum-of-the-Parts (SOTP) valuations to derive non-consensus price targets and identify asymmetric risk/reward profiles.</li>
+                <li>Constructed comprehensive 3-statement operating models and DCFs to derive non-consensus price targets and identify asymmetric risk/reward profiles.</li>
                 <li>Conducted rigorous fundamental analysis across FMCG, renewable energy, and pharmaceutical sectors; synthesized competitive dynamics, unit economics, and margin drivers to inform institutional investment strategies.</li>
                 <li>Engineered robust financial data templates in Excel, integrating historical financials, management guidance, and macro-economic assumptions to standardize peer comparison frameworks.</li>
               </ul>
@@ -114,9 +113,9 @@ export default function ResumePage() {
           <section>
             <h2 className="font-sans text-sm uppercase tracking-widest text-foreground font-semibold border-b border-border-strong pb-2 mb-6">Technical &amp; Analytical Skills</h2>
             <ul className="space-y-3 font-serif text-base text-foreground font-light">
-              <li><span className="font-medium mr-2">Financial Modeling:</span> DCF, Comparable Company Analysis (CCA), 3-Statement Modeling, SOTP Valuation.</li>
+              <li><span className="font-medium mr-2">Financial Modeling:</span> DCF, Comparable Company Analysis (CCA), and 3-Statement Modeling.</li>
               <li><span className="font-medium mr-2">Analytical Skills:</span> Equity Valuation, Sector/Industry Research, Competitive Analysis, Financial Statement Analysis.</li>
-              <li><span className="font-medium mr-2">Tools &amp; Technical:</span> Advanced Excel, Python (pandas, NumPy), Data Interpretation, Google Workspace.</li>
+              <li><span className="font-medium mr-2">Tools &amp; Technical:</span> Advanced Excel, Python, Data Interpretation, Google Workspace.</li>
             </ul>
           </section>
         </article>
@@ -133,7 +132,7 @@ export default function ResumePage() {
             Khushi Bansal
           </h1>
           <div style={{ fontSize: '10pt', fontFamily: 'sans-serif' }}>
-            New Delhi, India &nbsp;|&nbsp; +91 87000 12023 &nbsp;|&nbsp; thekhushibansal.work@gmail.com &nbsp;|&nbsp; linkedin.com/in/thekhushibansal
+            New Delhi, India &nbsp;|&nbsp; Thekhushibansal.work@gmail.com &nbsp;|&nbsp; linkedin.com/in/thekhushibansal
           </div>
         </header>
 
@@ -159,7 +158,7 @@ export default function ResumePage() {
             <div style={{ fontStyle: 'italic', fontWeight: 'bold', marginBottom: '6px' }}>Equity Research Analyst</div>
             <ul style={{ margin: '0 0 0 20px', padding: 0 }}>
               <li style={{ marginBottom: '4px' }}>Published high-conviction initiation coverage on mid-to-large cap Indian equities (Nestle India, Waaree Energies) and thematic industry reports (Semaglutide Patent Cliff).</li>
-              <li style={{ marginBottom: '4px' }}>Constructed comprehensive 3-statement operating models, DCFs, and Sum-of-the-Parts (SOTP) valuations to derive non-consensus price targets and identify asymmetric risk/reward profiles.</li>
+              <li style={{ marginBottom: '4px' }}>Constructed comprehensive 3-statement operating models and DCFs to derive non-consensus price targets and identify asymmetric risk/reward profiles.</li>
               <li style={{ marginBottom: '4px' }}>Conducted rigorous fundamental analysis across FMCG, renewable energy, and pharmaceutical sectors; synthesized competitive dynamics, unit economics, and margin drivers to inform institutional investment strategies.</li>
               <li style={{ marginBottom: '4px' }}>Engineered robust financial data templates in Excel, integrating historical financials, management guidance, and macro-economic assumptions to standardize peer comparison frameworks.</li>
             </ul>
@@ -206,9 +205,9 @@ export default function ResumePage() {
             Technical &amp; Analytical Skills
           </h2>
           <ul style={{ margin: '0 0 0 20px', padding: 0 }}>
-            <li style={{ marginBottom: '4px' }}><strong style={{ fontFamily: 'sans-serif' }}>Financial Modeling:</strong> DCF, Comparable Company Analysis (CCA), 3-Statement Modeling, SOTP Valuation.</li>
+            <li style={{ marginBottom: '4px' }}><strong style={{ fontFamily: 'sans-serif' }}>Financial Modeling:</strong> DCF, Comparable Company Analysis (CCA), and 3-Statement Modeling.</li>
             <li style={{ marginBottom: '4px' }}><strong style={{ fontFamily: 'sans-serif' }}>Analytical Skills:</strong> Equity Valuation, Sector/Industry Research, Competitive Analysis, Financial Statement Analysis.</li>
-            <li style={{ marginBottom: '4px' }}><strong style={{ fontFamily: 'sans-serif' }}>Tools &amp; Technical:</strong> Advanced Excel, Python (pandas, NumPy), Data Interpretation, Google Workspace.</li>
+            <li style={{ marginBottom: '4px' }}><strong style={{ fontFamily: 'sans-serif' }}>Tools &amp; Technical:</strong> Advanced Excel, Python, Data Interpretation, Google Workspace.</li>
           </ul>
         </section>
 

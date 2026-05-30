@@ -9,24 +9,24 @@ export default function ContactPage() {
 
         <div className="flex flex-col gap-12">
           <p className="font-sans text-lg text-foreground font-light max-w-2xl">
-            I am currently open to full-time opportunities and internships in Equity Research, Investment Banking, and Asset Management. 
+            I am currently open to full-time opportunities and internships in Equity Research, FP&A, and Venture Capital. 
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
             <div className="flex flex-col gap-2">
               <span className="font-sans text-xs uppercase tracking-widest text-text-muted">Email</span>
               <a 
-                href="mailto:thekhushibansal.work@gmail.com" 
+                href="mailto:Thekhushibansal.work@gmail.com" 
                 className="font-serif text-2xl text-foreground hover:text-text-muted transition-colors duration-300"
               >
-                thekhushibansal.work@gmail.com
+                Thekhushibansal.work@gmail.com
               </a>
             </div>
 
             <div className="flex flex-col gap-2">
               <span className="font-sans text-xs uppercase tracking-widest text-text-muted">Network</span>
               <a 
-                href="https://linkedin.com/in/thekhushibansal" 
+                href="https://www.linkedin.com/in/thekhushibansal/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-serif text-2xl text-foreground hover:text-text-muted transition-colors duration-300"

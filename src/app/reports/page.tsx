@@ -1,33 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { reportsData } from "@/data/reports";
+
 export default function ReportsIndex() {
-  const reports = [
-    {
-      title: "Nestle India",
-      subtitle: "Capitalizing on Rural Resurgence and Premiumization",
-      date: "September 2024",
-      target: "INR 2,836",
-      recommendation: "BUY",
-      slug: "nestle-india"
-    },
-    {
-      title: "Waaree Energies",
-      subtitle: "Riding the Solar Wave with Robust Capacity Expansion",
-      date: "October 2024",
-      target: "INR 4,374",
-      recommendation: "BUY",
-      slug: "waaree-energies"
-    },
-    {
-      title: "Semaglutide & The Patent Cliff",
-      subtitle: "Navigating the Future of GLP-1 and Weight Loss Drugs",
-      date: "2024",
-      target: "Industry",
-      recommendation: "ANALYSIS",
-      slug: "semaglutide-patent-cliff"
-    }
-  ];
+  const reports = reportsData;
 
   return (
     <div className="w-full min-h-[80vh] flex flex-col justify-center animate-fade-in">
@@ -57,17 +34,23 @@ export default function ReportsIndex() {
               </div>
 
               <div className="flex flex-row md:w-1/2 justify-between items-center w-full">
-                <div className="flex flex-col items-start md:items-center w-1/2">
-                  <span className="font-sans text-xs text-text-muted uppercase tracking-widest mb-1">Target</span>
-                  <span className="font-sans text-base text-foreground">{report.target}</span>
-                </div>
-                
-                <div className="flex flex-col items-start md:items-center w-1/4">
-                  <span className="font-sans text-xs text-text-muted uppercase tracking-widest mb-1">Rec</span>
-                  <span className="font-sans text-sm font-medium tracking-wide text-foreground">
-                    {report.recommendation}
-                  </span>
-                </div>
+                {report.slug !== "semaglutide-patent-cliff" ? (
+                  <>
+                    <div className="flex flex-col items-start md:items-center w-1/2">
+                      <span className="font-sans text-xs text-text-muted uppercase tracking-widest mb-1">Target</span>
+                      <span className="font-sans text-base text-foreground">{report.target}</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-start md:items-center w-1/4">
+                      <span className="font-sans text-xs text-text-muted uppercase tracking-widest mb-1">Rec</span>
+                      <span className="font-sans text-sm font-medium tracking-wide text-foreground">
+                        {report.recommendation}
+                      </span>
+                    </div>
+                  </>
+                ) : (
+                  <div className="flex w-3/4"></div>
+                )}
 
                 <div className="flex justify-end w-1/4">
                   <ArrowRight className="w-5 h-5 text-text-muted group-hover:text-foreground transform group-hover:translate-x-2 transition-all duration-300" strokeWidth={1} />
