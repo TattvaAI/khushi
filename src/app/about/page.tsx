@@ -28,15 +28,13 @@ export default function AboutPage() {
           </section>
 
           <section className="mt-8 border-t border-[var(--color-border)] pt-12 flex flex-col sm:flex-row gap-8">
-            <a 
-              href="/pdfs/khushi-bansal-resume.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <Link 
+              href="/resume" 
               className="group inline-flex items-center gap-4 text-sm font-sans tracking-wide uppercase text-foreground bg-[var(--color-surface)] px-6 py-4 hover:bg-[var(--color-surface-hover)] transition-colors duration-300 border border-[var(--color-border)]"
             >
               <span>View Full Resume</span>
-              <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" strokeWidth={1.5} />
-            </a>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" strokeWidth={1.5} />
+            </Link>
             
             <Link 
               href="/contact" 

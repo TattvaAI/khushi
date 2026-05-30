@@ -17,6 +17,12 @@ export default function Header() {
           Research
         </Link>
         <Link 
+          href="/resume" 
+          className="text-sm font-sans text-foreground/80 hover:text-foreground transition-colors duration-300"
+        >
+          Resume
+        </Link>
+        <Link 
           href="/about" 
           className="text-sm font-sans text-foreground/80 hover:text-foreground transition-colors duration-300"
         >
