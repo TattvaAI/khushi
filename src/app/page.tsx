@@ -50,7 +50,6 @@ export default function Home() {
               </div>
 
               <div className="flex flex-row md:w-1/2 justify-between items-center w-full">
-                {report.slug !== "semaglutide-patent-cliff" ? (
                   <>
                     <div className="flex flex-col items-start md:items-center w-1/2">
                       <span className="font-sans text-xs text-text-muted uppercase tracking-widest mb-1">Target</span>
@@ -64,9 +63,6 @@ export default function Home() {
                       </span>
                     </div>
                   </>
-                ) : (
-                  <div className="flex w-3/4"></div>
-                )}
 
                 <div className="flex justify-end w-1/4">
                   <ArrowRight className="w-5 h-5 text-text-muted group-hover:text-foreground transform group-hover:translate-x-2 transition-all duration-300" strokeWidth={1} />
