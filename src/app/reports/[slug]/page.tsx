@@ -14,7 +14,7 @@ function NestleNativeReport() {
       <section className="print:break-inside-avoid">
         <h3 className="font-sans text-sm uppercase tracking-widest font-semibold border-b border-border-strong pb-2 mb-6">Investment Thesis</h3>
         <p className="mb-4">
-          We initiate coverage on Nestle India with a <strong>BUY</strong> rating and a 12-month target price of <strong>INR 2,836</strong> (vs. CMP INR 2,376), implying an upside potential of ~19%. Our conviction is anchored in a dual-engine growth strategy: a pronounced resurgence in rural FMCG consumption coupled with sustained premiumization across urban centers. 
+          We initiate coverage on Nestle India with a <strong>SELL</strong> rating and a 12-month target price of <strong>INR 1,587.5 to 1,987.5</strong>. Our conviction is anchored in a dual-engine growth strategy: a pronounced resurgence in rural FMCG consumption coupled with sustained premiumization across urban centers. 
         </p>
         <p>
           Despite near-term margin compression risks from raw material volatility, Nestle's pricing power and dominant market share in the <em>Prepared Dishes and Cooking Aids</em> segment (driving 38% of revenue) position it favorably against domestic peers.

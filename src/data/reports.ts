@@ -18,7 +18,7 @@ export const reportsData: Report[] = [
     recommendation: "SELL",
     slug: "nestle-india",
     pdfPath: "/pdfs/nestle-research-report.pdf",
-    isNative: false,
+    isNative: true,
   },
   {
     title: "Waaree Energies",
